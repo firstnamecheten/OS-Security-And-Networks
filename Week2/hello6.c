@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main() {
-printf("Program executed successfully\n");
-return 0; // 0 indicates success
+    printf("Program executed unsuccessfully\n");
+    return 1; // 1 indicates error
 }
+
