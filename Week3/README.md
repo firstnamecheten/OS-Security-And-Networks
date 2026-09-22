@@ -18,6 +18,6 @@ We learned about process IDs, exit codes, input/output, and how programs can bra
 
 
 ## How to Runn any C program is type these commands in terminal (i.e also called bash/shell)
-gcc taskX.c -o taskX     # compile the program 
-./taskX                  # run the program
+- gcc taskX.c -o taskX     # compile the program 
+- ./taskX                  # run the program
 
