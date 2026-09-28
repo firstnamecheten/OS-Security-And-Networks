@@ -20,4 +20,4 @@
 - Exit status connects program results to the OS shell.
 - Input/output in C uses `scanf` (stdin) and `printf` (stdout).
 - C is a **compiled language**, producing machine code unlike interpreted languages.
-
+- stdio.h library is used for input/output functions like printf() and scanf(). 
