@@ -20,4 +20,4 @@
 - Standard I/O streams connect programs with the user.
 - Conditional execution allows programs to branch and terminate differently.
 - Linux tools (`ps`, `$?`) verify and monitor process behavior.
-
+- unistd.h library is required for using sleep, getpid, and getppid
