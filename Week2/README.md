@@ -1,30 +1,23 @@
-# Lab 2: C Programming Basics
+**Lab 2 – C Programming Basics**
 
-## Contents
-- Lab2.pdf (full report with screenshots and answers)
-- hello.c, hello1.c, hello2.c, hello3.c, hello4.c, hello5.c, hello6.c (C programs for lab tasks)
+♦ **Code Files**
+- **hello.c** → Basic "Hello, World!" program. Demonstrates program structure with `#include`, `main()`, and `return`.
+- **input.c** → Program with user input using `scanf` and `printf`. Reads an integer and displays it back.
+- **formatted_output.c** → Program with multiple variables (`name`, `age`, `height`) and formatted output using specifiers.
+- **return_value.c** → Program that prints a message and returns `0` (success) or `1` (error). Demonstrates exit status.
+- **compilation_examples** → Commands showing the four GCC compilation stages: preprocessing, compiling, assembling, linking.
 
-## Knowledge Check Answers
-1. `#include` brings in library code (e.g., `<stdio.h>`).
-2. Compilation stages:
-   - Preprocessing → `.i`
-   - Compiling → `.s`
-   - Assembling → `.o`
-   - Linking → executable
-3. `return 0;` = success, non‑zero = error.
-4. Program: asks user for integer and prints it back.
-5. GCC commands:
-   - Preprocess only: `gcc -E hello.c -o hello.i`
-   - Assembly only: `gcc -S hello.i -o hello.s`
-   - Object only: `gcc -c hello.s -o hello.o`
-6. C is compiled → machine code before running. Interpreted languages run line‑by‑line.
+♦ **What They Do**
+- **hello.c output** → Prints "Hello, World!" to the terminal.
+- **input.c output** → Prompts user for a number and prints it back.
+- **formatted_output.c output** → Prompts for name, age, height and prints formatted user info.
+- **return_value.c output** → Shows how return values communicate success (`0`) or failure (`1`) to the OS, verified with `echo $?`.
+- **compilation_examples** → Demonstrates how source code transforms into `.i`, `.s`, `.o`, and final executable.
 
-## Lab Tasks
-- Task 1: Hello World with return 0
-- Task 2: Modified program with return 1
-- Task 3: Program with user input
-- Task 4: Compilation stages demonstrated
-- Task 5: Program returning 50
+♦ **Key Learning**
+- C program structure: preprocessor directives, `main()` function, return values.
+- GCC compilation process: **Preprocessing → Compilation → Assembling → Linking**.
+- Exit status connects program results to the OS shell.
+- Input/output in C uses `scanf` (stdin) and `printf` (stdout).
+- C is a **compiled language**, producing machine code unlike interpreted languages.
 
-## Notes
-- Screenshots and detailed evidence are inside Lab2.pdf.
