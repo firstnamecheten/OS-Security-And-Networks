@@ -12,7 +12,7 @@
 
 ♦ **Key Learning**
 - Data types are contracts between compiler and OS.
-- Memory is segmented: **Text, Data, BSS, Heap, Stack**.
+- Memory is segmented: OS divides process memory into **Text, Data, BSS, Heap, Stack**.
 - Stack grows downward, heap grows upward.
 - Pointers bridge stack and heap.
-
+- Pointers live on stack but point to heap memory.
