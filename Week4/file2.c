@@ -5,7 +5,7 @@ int global_var = 150; // Data segment (initialized global variable)->(value assi
 int bss_var; // BSS/Data segment (uninitialized global variable)->(value not assigned))
 
 int main() {
-	int local_var = 30; // Stack (local variable,initialized, stack grows downward)
+	int local_var = 30; // (local_var is a local variable,initialized, for local variable space is reserved on stack (30 is placed into that reserved memory slot. Slot has a unique hexadecimal address), stack grows downward)
 	static int local_static = 20; // Data segment (static initialized variable)
 
 	int *heap_var = (int *)malloc(sizeof(int)); // Heap (dynamic allocation) -> reserves some heap space and returns its address.
