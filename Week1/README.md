@@ -1,78 +1,131 @@
-Week 1 - Linux Basics and C Programming
-Objective
-Learn basic Linux file operations, package management, and C program compilation using GCC.
+# Week 1 - Linux Basics and C Programming
 
-File Operations
-Create Directory
+---
 
+## File Operations
+
+### Create Directory
+
+```bash
 mkdir linux_lab
-Change Directory
+```
 
+### Change Directory
+
+```bash
 cd linux_lab
-Create File
+```
 
+### Create File
+
+```bash
 touch greeting.txt
-View File Contents
+```
 
+### View File Contents
+
+```bash
 cat greeting.txt
-Copy File
+```
 
+### Copy File
+
+```bash
 cp greeting.txt backup.txt
-Move/Rename File
+```
 
+### Move / Rename File
+
+```bash
 mv backup.txt old_greeting.txt
-Delete File
+```
 
+### Delete File
+
+```bash
 rm old_greeting.txt
-Remove Empty Directory
+```
 
+### Remove Empty Directory
+
+```bash
 rmdir folder_name
-Remove Directory With Contents
+```
 
+### Remove Directory and Contents
+
+```bash
 rm -r folder_name
-Package Management
-Update Packages
+```
 
+---
+
+## Package Management
+
+### Update Packages
+
+```bash
 sudo apt update
-Install GCC Tools
+```
 
+### Install GCC Tools
+
+```bash
 sudo apt install build-essential
-Check GCC Version
+```
 
+### Check GCC Version
+
+```bash
 gcc --version
-C Programming
-Compile Program
+```
 
+---
+
+## C Programming
+
+### Compile Program
+
+```bash
 gcc hello.c -o hello_program
-Compile With Warnings
+```
 
+### Compile With Warnings
+
+```bash
 gcc -Wall hello.c -o hello_program_warn
-Run Program
+```
 
+### Run Program
+
+```bash
 ./hello_program
-Permission Commands
-Check Permissions
+```
 
-ls -l
-Detailed Listing
+---
 
-ls -lh
-Files Included
-Lab1 Task.pdf
-hello.c
-greeting.txt
-README.md
-Quick Reference
-Command	Purpose
-mkdir	Create directory
-cd	Change directory
-touch	Create file
-cat	Display file
-cp	Copy file
-mv	Move/Rename file
-rm	Delete file
-rmdir	Remove empty directory
-apt update	Update repositories
-apt install	Install packages
-gcc	Compile C code
-./program	Run executable
+## Files Included
+
+- Lab1 Task.pdf
+- hello.c
+- greeting.txt
+- README.md
+
+---
+
+## Quick Reference
+
+| Command | Purpose |
+|----------|----------|
+| mkdir | Create directory |
+| cd | Change directory |
+| touch | Create file |
+| cat | Display file |
+| cp | Copy file |
+| mv | Move/Rename file |
+| rm | Delete file |
+| rmdir | Remove empty directory |
+| apt update | Update package list |
+| apt install | Install package |
+| gcc | Compile C code |
+| ./program | Run executable |
