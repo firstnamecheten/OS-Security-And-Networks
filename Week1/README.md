@@ -1,4 +1,4 @@
-# Week 1 - Linux Basics and C Programming
+Week 1 - Linux Basics and C Programming
 
 ---
 
