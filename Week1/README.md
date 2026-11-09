@@ -1,102 +1,38 @@
 # Week 1 - Linux Basics and C Programming
 
----
+## Introduction
 
-## File Operations
-
-### Create Directory
-
-```bash
-mkdir linux_lab
-```
-
-### Change Directory
-
-```bash
-cd linux_lab
-```
-
-### Create File
-
-```bash
-touch greeting.txt
-```
-
-### View File Contents
-
-```bash
-cat greeting.txt
-```
-
-### Copy File
-
-```bash
-cp greeting.txt backup.txt
-```
-
-### Move / Rename File
-
-```bash
-mv backup.txt old_greeting.txt
-```
-
-### Delete File
-
-```bash
-rm old_greeting.txt
-```
-
-### Remove Empty Directory
-
-```bash
-rmdir folder_name
-```
-
-### Remove Directory and Contents
-
-```bash
-rm -r folder_name
-```
+This lab introduces basic Linux commands, file management, package management, and C program compilation using GCC. The objective is to become familiar with creating, editing, compiling, and executing programs within a Linux environment.
 
 ---
 
-## Package Management
+## Learning Objectives
 
-### Update Packages
-
-```bash
-sudo apt update
-```
-
-### Install GCC Tools
-
-```bash
-sudo apt install build-essential
-```
-
-### Check GCC Version
-
-```bash
-gcc --version
-```
+- Learn basic Linux file operations.
+- Learn package management using APT.
+- Understand C program compilation using GCC.
+- Learn how to execute compiled programs.
+- Understand the software development workflow.
 
 ---
 
-## C Programming
+## Files Included
 
-### Compile Program
+- Lab1 Task.pdf
+- greeting.txt
+- hello.c
+
+---
+
+## How to Run
+
+### Compile
 
 ```bash
 gcc hello.c -o hello_program
 ```
 
-### Compile With Warnings
-
-```bash
-gcc -Wall hello.c -o hello_program_warn
-```
-
-### Run Program
+### Execute
 
 ```bash
 ./hello_program
@@ -104,28 +40,19 @@ gcc -Wall hello.c -o hello_program_warn
 
 ---
 
-## Files Included
+## Expected Result
 
-- Lab1 Task.pdf
-- hello.c
-- greeting.txt
-- README.md
+The program displays a greeting message and demonstrates basic C program execution.
+
+Example:
+
+```text
+Hello World
+```
 
 ---
 
-## Quick Reference
+## Summary
 
-| Command | Purpose |
-|----------|----------|
-| mkdir | Create directory |
-| cd | Change directory |
-| touch | Create file |
-| cat | Display file |
-| cp | Copy file |
-| mv | Move/Rename file |
-| rm | Delete file |
-| rmdir | Remove empty directory |
-| apt update | Update package list |
-| apt install | Install package |
-| gcc | Compile C code |
-| ./program | Run executable |
+This lab successfully demonstrated Linux file management, software installation using APT, C source code compilation, and program execution using GCC.
+
