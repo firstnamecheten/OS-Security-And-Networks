@@ -1,4 +1,4 @@
-# Week 3 - Investigating Process Lifecycles and OS Interaction
+# Lab 3: Investigating Process Lifecycles and OS Interaction
 
 ---
 
