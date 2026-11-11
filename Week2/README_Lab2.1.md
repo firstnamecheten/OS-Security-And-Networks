@@ -1,4 +1,4 @@
-# Lab 2.1 - C Libraries, Linking, and ELF Executable Structure
+# Lab 2.1: C Libraries, Linking, and ELF Executable Structure
 
 ---
 
