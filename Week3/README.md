@@ -1,23 +1,234 @@
-**Lab 3 – Investigating Process Lifecycles and OS Interaction**
+# Week 3 - Linux Process Management and OS Interaction
 
-♦ **Code Files**
-- **task1_alive.c** → Runs for 30 seconds using a loop and `sleep()`. Demonstrates how long‑running processes behave and can be monitored while active.
-- **task2_identity.c** → Prints the process ID (PID) and parent process ID (PPID). Shows how Linux assigns and tracks process identities.
-- **task3_exit.c** → Accepts user input and returns exit codes. Positive input returns `0` (Success), negative input returns `1` (Failure). Demonstrates OS feedback via `$?`.
-- **task4_input.c** → Reads a string from standard input (`stdin`) and prints it to standard output (`stdout`). Demonstrates basic I/O streams.
-- **task5_control.c** → Prints PID, asks user if program should continue or exit. If user chooses Yes, program sleeps and exits with `0`. If No, program exits with `1`. Demonstrates conditional execution and termination.
+---
 
-♦ **What They Do**
-- **task1_alive.c output** → Program runs in background for 30 seconds, can be monitored with `ps aux`.
-- **task2_identity.c output** → Prints PID and PPID, verifies with `ps -p`.
-- **task3_exit.c output** → Shows Success/Failure messages and exit codes (`0` or `1`).
-- **task4_input.c output** → Prompts for name and prints greeting message.
-- **task5_control.c output** → Shows PID, continues or exits based on user choice, with exit codes reflecting the decision.
+## Introduction
 
-♦ **Key Learning**
-- OS manages processes with unique IDs (PID, PPID).
-- Programs return exit codes to communicate success or failure.
-- Standard I/O streams connect programs with the user.
-- Conditional execution allows programs to branch and terminate differently.
-- Linux tools (`ps`, `$?`) verify and monitor process behavior.
-- unistd.h library is required for using system call functions like sleep(), getpid(), and getppid().
+This lab explores the relationship between C programs and the Linux operating system. Instead of simply printing text, the programs interact with the Linux kernel to obtain process information, manage execution time, communicate status codes, and respond to user input.
+
+---
+
+## Learning Objectives
+
+- Understand what a process is.
+- Learn how to obtain PID and PPID.
+- Understand process monitoring.
+- Learn how exit codes communicate with the operating system.
+- Practice working with stdin and stdout.
+- Understand conditional execution.
+
+---
+
+## Files Included
+
+- Lab3.pdf
+- task1_alive.c
+- task2_identity.c
+- task3_exit.c
+- task4_input.c
+- task5_control.c
+- README.md
+
+---
+
+## Task 1 - Long Running Process
+
+Compile:
+
+```bash
+gcc task1_alive.c -o task1
+```
+
+Run:
+
+```bash
+./task1 &
+```
+
+Expected Result:
+
+```text
+I am starting...
+I am finished.
+```
+
+The process remains active for approximately 30 seconds and can be inspected while running.
+
+---
+
+## Task 2 - Process Identity (PID and PPID)
+
+Compile:
+
+```bash
+gcc task2_identity.c -o task2
+```
+
+Run:
+
+```bash
+./task2
+```
+
+Expected Result:
+
+```text
+My PID is: XXXX
+My Parent PID is: XXXX
+Sleeping for 20 seconds...
+```
+
+Shows that every process has a unique PID and a parent process. 【1-73711e】
+
+---
+
+## Task 3 - Exit Codes and OS Feedback
+
+Compile:
+
+```bash
+gcc task3_exit.c -o task3
+```
+
+Run:
+
+```bash
+./task3
+```
+
+Check Exit Status:
+
+```bash
+echo $?
+```
+
+Expected Result:
+
+```text
+Success
+```
+
+Return value:
+
+```text
+0
+```
+
+or
+
+```text
+Failure
+```
+
+Return value:
+
+```text
+1
+```
+
+The operating system uses exit codes to determine success or failure. 【1-73711e】
+
+---
+
+## Task 4 - Standard I/O Streams
+
+Compile:
+
+```bash
+gcc task4_input.c -o task4
+```
+
+Run:
+
+```bash
+./task4
+```
+
+Expected Result:
+
+```text
+Enter your name:
+Hello, <name>! Welcome to OS Class.
+```
+
+Demonstrates the use of stdin and stdout through scanf() and printf(). 【1-73711e】
+
+---
+
+## Task 5 - Conditional Execution and Termination
+
+Compile:
+
+```bash
+gcc task5_control.c -o task5
+```
+
+Run:
+
+```bash
+./task5
+```
+
+Expected Result:
+
+```text
+Current PID: XXXX
+Do you want to continue? (1 for Yes, 0 for No):
+```
+
+If user enters:
+
+```text
+1
+```
+
+Result:
+
+```text
+Continuing...
+```
+
+Exit Code:
+
+```text
+0
+```
+
+If user enters:
+
+```text
+0
+```
+
+Result:
+
+```text
+Exiting...
+```
+
+Exit Code:
+
+```text
+1
+```
+
+---
+
+## Summary of Results
+
+This lab demonstrated that programs run as processes managed by the Linux kernel. Through practical exercises involving PIDs, exit codes, input/output streams, and conditional execution, the interaction between user programs and the operating system became clear. 【1-73711e】
+
+---
+
+## Quick Reference
+
+| Command | Purpose |
+|----------|----------|
+| gcc file.c -o file | Compile program |
+| ./file | Execute program |
+| ps | Show running processes |
+| ps aux | Detailed process list |
+| echo $? | Show previous exit code |
+| getpid() | Get process ID |
+| getppid() | Get parent process ID |
+| sleep() | Pause execution |
