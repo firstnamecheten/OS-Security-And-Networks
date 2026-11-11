@@ -1,4 +1,4 @@
-# Week 3 - Linux Process Management and OS Interaction
+# Week 3 - Investigating Process Lifecycles and OS Interaction
 
 ---
 
@@ -16,18 +16,6 @@ This lab explores the relationship between C programs and the Linux operating sy
 - Learn how exit codes communicate with the operating system.
 - Practice working with stdin and stdout.
 - Understand conditional execution.
-
----
-
-## Files Included
-
-- Lab3.pdf
-- task1_alive.c
-- task2_identity.c
-- task3_exit.c
-- task4_input.c
-- task5_control.c
-- README.md
 
 ---
 
