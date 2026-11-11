@@ -1,4 +1,4 @@
-# Lab 1: Linux Basics and C Programming
+# Lab 1: Files, APT, and C Programming
 
 ## Introduction
 
