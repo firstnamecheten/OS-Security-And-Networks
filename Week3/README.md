@@ -66,7 +66,7 @@ My Parent PID is: XXXX
 Sleeping for 20 seconds...
 ```
 
-Shows that every process has a unique PID and a parent process. 【1-73711e】
+Shows that every process has a unique PID and a parent process.
 
 ---
 
@@ -114,7 +114,7 @@ Return value:
 1
 ```
 
-The operating system uses exit codes to determine success or failure. 【1-73711e】
+The operating system uses exit codes to determine success or failure.
 
 ---
 
@@ -139,7 +139,7 @@ Enter your name:
 Hello, <name>! Welcome to OS Class.
 ```
 
-Demonstrates the use of stdin and stdout through scanf() and printf(). 【1-73711e】
+Demonstrates the use of stdin and stdout through scanf() and printf().
 
 ---
 
@@ -204,7 +204,7 @@ Exit Code:
 
 ## Summary of Results
 
-This lab demonstrated that programs run as processes managed by the Linux kernel. Through practical exercises involving PIDs, exit codes, input/output streams, and conditional execution, the interaction between user programs and the operating system became clear. 【1-73711e】
+This lab demonstrated that programs run as processes managed by the Linux kernel. Through practical exercises involving PIDs, exit codes, input/output streams, and conditional execution, the interaction between user programs and the operating system became clear. 
 
 ---
 
