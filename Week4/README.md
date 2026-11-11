@@ -21,16 +21,6 @@ This lab explores data type sizes, process memory organization, memory segments,
 
 ---
 
-## Files Included
-
-- Lab4.pdf
-- file1.c
-- file2.c
-- file3.c
-- README.md
-
----
-
 ## Program 1 - Data Type Size Exploration
 
 ### Compile
