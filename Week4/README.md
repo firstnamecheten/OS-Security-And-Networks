@@ -1,4 +1,4 @@
-# Week 4 - A Practical Approach to Understanding System Internals ( Data Types and OS Memory Management )
+# Lab 4: A Practical Approach to Understanding System Internals ( Data Types and OS Memory Management )
 
 ---
 
