@@ -4,148 +4,175 @@
 
 ## Introduction
 
-This lab explores how the operating system allocates memory for different data types and how a process is organized into separate memory segments such as Text, Data, BSS, Heap, and Stack. 【2-08fb72】
+Data types form the foundation of programming and operating system interaction. Whenever a programmer declares a variable, the operating system allocates memory to store that data. Understanding how memory is allocated and managed is essential for writing efficient, secure, and reliable programs.
+
+This lab explores data type sizes, process memory organization, memory segments, pointers, stack memory, and heap memory in Linux systems.
 
 ---
 
 ## Learning Objectives
 
-- Understand fundamental C data types.
-- Learn how memory is allocated by the OS.
+- Understand how different data types occupy memory.
+- Learn how the operating system allocates memory.
 - Explore process memory segments.
-- Understand stack and heap memory.
-- Learn pointer usage.
-- Analyze memory addresses.
+- Understand the difference between stack and heap memory.
+- Learn how pointers reference memory locations.
+- Observe memory addresses of variables during execution.
 
 ---
 
-## Lab 1 - Data Type Size Exploration
+## Files Included
 
-Compile:
+- Lab4.pdf
+- file1.c
+- file2.c
+- file3.c
+- README.md
+
+---
+
+## Program 1 - Data Type Size Exploration
+
+### Compile
 
 ```bash
 gcc file1.c -o file1
 ```
 
-Run:
+### Run
 
 ```bash
 ./file1
 ```
 
-Expected Result:
+### Expected Result
+
+The program displays the size of various data types on the current system.
+
+Example:
 
 ```text
-char: 1 bytes
-int: 4 bytes
-float: 4 bytes
-double: 8 bytes
-long: 8 bytes
-pointer: 8 bytes
+char = 1 byte
+int = 4 bytes
+float = 4 bytes
+double = 8 bytes
+long = 8 bytes
+pointer = 8 bytes
 ```
 
-Demonstrates data type sizes on a 64-bit Linux system. 【2-08fb72】
+### Observation
+
+The output confirms how a 64-bit Linux system allocates memory for different primitive data types.
 
 ---
 
-## Lab 2 - Memory Segment Address Mapping
+## Program 2 - Memory Segment Address Mapping
 
-Compile:
+### Compile
 
 ```bash
 gcc file2.c -o file2
 ```
 
-Run:
+### Run
 
 ```bash
 ./file2
 ```
 
-Expected Result:
+### Expected Result
+
+The program displays the memory addresses of variables stored in different memory segments.
+
+Example:
 
 ```text
-global_var: address
-bss_var: address
-local_var: address
-local_static: address
-heap_var ptr: address
-*heap_var: address
+Global Variable Address: 0x...
+Static Variable Address: 0x...
+Heap Variable Address: 0x...
+Local Variable Address: 0x...
 ```
 
-Observ*tions:
+### Observation
 
-- Stack addresses are high*
-- Heap addresses are lower than s*ack addresses.
-- Global and static*variables live in Data/BSS segment*. 【2-08fb72】
+The output demonstrates that:
+
+- Stack variables occupy high memory addresses.
+- Heap variables occupy lower memory addresses.
+- Global and static variables are stored in dedicated data segments.
 
 ---
 
-## Lab 3 - Poin*er*and Heap Allocation
+## Program 3 - Pointer and Heap Memory Allocation
 
-*ompile:
+### Compile
 
 ```bash
-gcc file3.c -o fi*e3
+gcc file3.c -o file3
 ```
 
-Run:
+### Run
 
 ```bash
 ./file3
 ```
-*Expected Result:
+
+### Expected Result
+
+The program displays:
 
 ```text
-Address *f pointer (STACK):
-Address of data*(HEAP):
-Value stored: 30
+Pointer Address: 0x...
+Heap Address: 0x...
+Stored Value: 30
 ```
 
-Demo*strates that the pointer variable *xists on the stack while the*dynamically allocated data resides*in the heap. 【2-08fb72】
+### Observation
+
+The pointer variable itself is stored on the stack, while the memory allocated using malloc() is located in the heap.
 
 ---
 
-## M*mory Segments
+## Process Memory Segments
 
-|*Segment | Purpose |
-|----------|--*-------|
-| Text | Program instruct*ons |
-| Data | Initialized global *ariables |
-| BSS | Uninitialized g*obal variables |
-| Heap | Dynamica*ly allocated memory |
-| Stack | Lo*al variables and function calls |
-*Based on the process memory layout*discussed in the lab. *2-08fb72】
-
----
-
-## Key*Concepts Learned*
-- Data types determine*memory allocation.
-- Stack memory*is managed automatically.
-* Heap memory is managed manually u*ing allocation functions*
-- Virtual memory isolates*processes.
-- Pointers connect stac* variables to heap*memory.
-- Operating systems manage*memory allocation and protection. *2-08fb72】
+| Segment | Purpose |
+|----------|----------|
+| Text | Stores executable program instructions |
+| Data | Stores initialized global variables |
+| BSS | Stores uninitialized global variables |
+| Heap | Stores dynamically allocated memory |
+| Stack | Stores local variables and function calls |
 
 ---
 
-## Summary of Resu*ts
+## Key Concepts Learned
 
-The lab successfully demonstra*ed data type sizes, process memory*segmentation, stack versus heap al*ocation, pointer behavior, and vir*ual memory organization. Experimen*s confirmed that stack addresses a*e numerically higher than heap add*esses and that pointers stored on *he stack can reference data locate* in heap*memory. *2-08fb72】
+- Data types determine how much memory the operating system allocates.
+- Memory is divided into separate segments with different purposes.
+- The stack grows automatically during function calls.
+- The heap is used for dynamic memory allocation.
+- Pointers store memory addresses.
+- Virtual memory allows processes to execute independently and securely.
 
 ---
 
-## Quick*Reference
+## Summary of Results
+
+This lab demonstrated how Linux manages memory for programs. The experiments verified data type sizes, process memory segmentation, stack and heap allocation, and pointer behavior. The results showed that stack addresses are typically higher than heap addresses and that pointers can be used to access dynamically allocated memory.
+
+---
+
+## Quick Reference
 
 | Command | Purpose |
-|*---------|*---------|
-| gcc file1*c -o file1 | Compile Lab*1 |
-| gcc file2.c -o*file2 | Compile Lab 2 |
-| gcc*file3.c -o file3 | Compile Lab*3 |
-| ./file1*| Run Lab 1 |
-| ./file2*| Run Lab 2 |
-| ./file3*| Run Lab 3 |
-| echo*$? | Check program exit status |
-|*malloc() | Allocate heap memory |
-* free() | Release heap memory |
-|*sizeof() | Determine data type siz* |
+|----------|----------|
+| gcc file1.c -o file1 | Compile Program 1 |
+| gcc file2.c -o file2 | Compile Program 2 |
+| gcc file3.c -o file3 | Compile Program 3 |
+| ./file1 | Run Program 1 |
+| ./file2 | Run Program 2 |
+| ./file3 | Run Program 3 |
+| echo $? | Display exit status |
+| malloc() | Allocate heap memory |
+| free() | Release heap memory |
+| sizeof() | Determine data type size |
