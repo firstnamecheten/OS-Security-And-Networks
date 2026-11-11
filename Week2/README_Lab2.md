@@ -1,4 +1,4 @@
-# Week 2 - C Programming Basics Lab Report and Knowledge Check
+# Lab 2: C Programming Basics Lab Report and Knowledge Check
 
 ## Introduction
 
