@@ -16,14 +16,6 @@ This lab introduces basic Linux commands, file management, package management, a
 
 ---
 
-## Files Included
-
-- Lab1 Task.pdf
-- greeting.txt
-- hello.c
-
----
-
 ## How to Run
 
 ### Compile
